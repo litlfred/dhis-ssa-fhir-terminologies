@@ -1,0 +1,38 @@
+{
+    "version": "0.1",
+    "name": "FHIR DSTU2 Terminology",
+    "description": "Simple FHIR DSTU2 Terminology Service for metadata",
+    "launch_path": "index.html",
+    "developer": {
+        "name": "Carl Leitner <litlfred@gmail.com>",
+        "url": "http://github.com/litlfred/dhis-web-script-library"
+    },
+    "default_locale": "en",
+    "activities": {
+        "dhis": {
+            "href": "*"
+        }
+    },
+    "script-library": {
+	"dependencies" :  {
+            "valueset_read.js" : [ "lib/MetadataFHIR.js" ],
+            "lib/MetadataFHIR.js" : [ "lib/Metadata.js" ],
+            "lib/Metadata.js" : [ "lib/SystemInfo.js" , "lib/Errors.js" ],
+            "lib/SystemInfo.js" : [ "lib/Errors.js" ]
+        },
+	"bindings" : {
+	    "fhir" : {
+		"dstu2" : [
+		    {
+			"script" : "valueset_read.js",
+			"resource" : "ValueSet",
+			"operation" : "read",
+			"example_url" : "http://localhost:8080/ohie/fhir/dstu2/terminologies/ValueSet/example"
+		    }
+		]
+	    }
+	}
+
+    }    
+}
+
