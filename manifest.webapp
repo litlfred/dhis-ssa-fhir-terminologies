@@ -16,9 +16,9 @@
     "script-library": {
 	"dependencies" :  {
             "valueset_read.js" : [ 
-	        "dhis-ssa-core-services/node_modules/Error.js" 
+	        "dhis-ssa-core-services/node_modules/Error.js" ,
 	        "dhis-ssa-metadata-fhir/node_modules/MetadataFHIR.js" 
-	     ],
+	     ]
         },
 	"bindings" : {
 	    "fhir" : {
