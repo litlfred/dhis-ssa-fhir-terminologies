@@ -5,7 +5,7 @@
     "launch_path": "index.html",
     "developer": {
         "name": "Carl Leitner <litlfred@gmail.com>",
-        "url": "http://github.com/litlfred/dhis-web-script-library"
+        "url": "http://github.com/litlfred/dhis-web-fhir-terminologies"
     },
     "default_locale": "en",
     "activities": {
@@ -15,10 +15,10 @@
     },
     "script-library": {
 	"dependencies" :  {
-            "valueset_read.js" : [ "lib/MetadataFHIR.js" ],
-            "lib/MetadataFHIR.js" : [ "lib/Metadata.js" ],
-            "lib/Metadata.js" : [ "lib/SystemInfo.js" , "lib/Errors.js" ],
-            "lib/SystemInfo.js" : [ "lib/Errors.js" ]
+            "valueset_read.js" : [ 
+	        "dhis-ssa-core-services/node_modules/Error.js" 
+	        "dhis-ssa-metadata-fhir/node_modules/MetadataFHIR.js" 
+	     ],
         },
 	"bindings" : {
 	    "fhir" : {
