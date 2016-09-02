@@ -2,7 +2,7 @@
   "version": "1.0.1",
   "name": "FHIR DSTU2 Terminology",
   "description": "Simple FHIR DSTU2 Terminology Service for metadata",
-  "launch_path": "index.html",
+  "launch_path": "../../../ohie/fhir/dstu2/dhis-ssa-fhir-terminologies/index.js",
   "developer": {
     "name": "Carl Leitner <litlfred@gmail.com>",
     "url": "http://github.com/litlfred/dhis-web-fhir-terminologies"
@@ -24,7 +24,7 @@
       "fhir": {
         "dstu2": [
           {
-            "script": "lib/valueset_read.js",
+            "script": "lib/read.js",
             "resource": "ValueSet",
             "operation": "read",
             "example_url": "http://localhost:8080/ohie/fhir/dstu2/terminologies/ValueSet/example"
