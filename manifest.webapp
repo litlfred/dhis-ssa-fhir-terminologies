@@ -17,17 +17,17 @@
     "dependencies": {
       "lib/valueset_read.js": [
         "/apps/dhis-ssa-core-services/lib/Errors.js",
-        "/apps/dhis-ssa-metadata-fhir/lib/MetadataFHIR.js"
+        "/apps/dhis-ssa-metadata-fhir/lib/MetadataFHIR_STU3.js"
       ]
     },
     "bindings": {
       "fhir": {
-        "dstu2": [
+        "dstu3": [
           {
             "script": "lib/read.js",
-            "resource": "ValueSet",
+            "resource": ["CodeSystem","ValueSet","ConceptMap"]
             "operation": "read",
-            "example_url": "http://localhost:8080/ohie/fhir/dstu2/terminologies/ValueSet/example"
+            "example_url": "http://localhost:8080/ohie/fhir/dstu3/dhis-ssa-fhir-terminologies/CodeSystem/dataElements"
           }
         ]
       }
