@@ -15,17 +15,36 @@
   },
   "script-library": {
     "dependencies": {
-      "lib/valueset_read.js": [
+      "lib/read_STU2.js": [
+        "/apps/dhis-ssa-core-services/lib/Errors.js",
+        "/apps/dhis-ssa-metadata-fhir/lib/MetadataFHIR_STU2.js"
+      ],
+      "lib/read_STU3.js": [
         "/apps/dhis-ssa-core-services/lib/Errors.js",
         "/apps/dhis-ssa-metadata-fhir/lib/MetadataFHIR_STU3.js"
       ]
     },
     "bindings": {
       "fhir": {
+        "dstu2": [
+          {
+            "script": "lib/read_STU2.js",
+            "resource": [
+              "CodeSystem",
+              "ValueSet",
+              "ConceptMap"
+            ],
+            "operation": "read",
+            "example_url": "http://localhost:8080/ohie/fhir/dstu3/dhis-ssa-fhir-terminologies/CodeSystem/dataElements"
+          }
+        ],
         "dstu3": [
           {
-            "script": "lib/read.js",
-            "resource": ["CodeSystem","ValueSet","ConceptMap"]
+            "script": "lib/read_STU3.js",
+            "resource": [
+              "ValueSet",
+              "ConceptMap"
+            ],
             "operation": "read",
             "example_url": "http://localhost:8080/ohie/fhir/dstu3/dhis-ssa-fhir-terminologies/CodeSystem/dataElements"
           }
