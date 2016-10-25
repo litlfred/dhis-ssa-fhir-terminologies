@@ -38,7 +38,7 @@
             "example_url": "http://localhost:8080/ohie/fhir/dstu2/dhis-ssa-fhir-terminologies/ValueSet/categories"
           }
         ],
-        "dstu3": [
+        "stu3": [
           {
             "script": "lib/read_STU3.js",
             "resource": [
